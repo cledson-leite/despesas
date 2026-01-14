@@ -5,6 +5,8 @@ import 'package:intl/intl.dart';
 void main() => runApp(ExpenseApp());
 
 class ExpenseApp extends StatelessWidget {
+  final TextEditingController titleController = TextEditingController();
+  final TextEditingController valueController = TextEditingController();
   final List<Transaction> _transactions = [
     Transaction(
       id: 't1',
@@ -94,11 +96,13 @@ class ExpenseApp extends StatelessWidget {
                 child: Column(
                   children: [
                     TextField(
+                      controller: titleController,
                       decoration: InputDecoration(
                         labelText: 'Título'
                       ),
                     ),
                     TextField(
+                      controller: valueController,
                       decoration: InputDecoration(
                         labelText: 'Valor (R\$)'
                       ),
@@ -114,7 +118,10 @@ class ExpenseApp extends StatelessWidget {
                               fontSize: 16,
                             ),
                           ),
-                          onPressed: () => {},
+                          onPressed: () => {
+                            print(titleController.text),
+                            print(valueController.text)
+                          },
                         ),
                       ],
                     )
