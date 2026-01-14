@@ -35,7 +35,6 @@ class ExpenseApp extends StatelessWidget {
           ),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Card(child: Text('Gráficos')),
@@ -87,6 +86,41 @@ class ExpenseApp extends StatelessWidget {
                     )
                   ))
                   .toList(),
+            ),
+            Card(
+              elevation: 5,
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Título'
+                      ),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Valor (R\$)'
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        TextButton(
+                          child: Text(
+                            'Nova Transação',
+                            style: TextStyle(
+                              color: Colors.purple,
+                              fontSize: 16,
+                            ),
+                          ),
+                          onPressed: () => {},
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ),
           ],
         ),
