@@ -18,12 +18,14 @@ class ExpenseApp extends StatelessWidget {
             style: TextStyle(color: Colors.white, fontSize: 28),
           ),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Card(child: Text('Gráficos')),
-            TransactionUser(),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Card(child: Text('Gráficos')),
+              TransactionUser(),
+            ],
+          ),
         ),
       ),
     );
