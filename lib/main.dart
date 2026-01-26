@@ -10,7 +10,13 @@ void main() => runApp(
     home: ExpenseApp(),
     theme: ThemeData(
       useMaterial3: false,
+      fontFamily: 'Quicksand',
       textTheme: ThemeData.light().textTheme.copyWith(
+        titleLarge: TextStyle(
+          fontFamily: 'OpenSans',
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+        ),
         titleMedium: TextStyle(
           fontFamily: 'OpenSans',
           fontSize: 18.0,
@@ -49,18 +55,18 @@ class ExpenseApp extends StatefulWidget {
 
 class _ExpenseAppState extends State<ExpenseApp> {
   final List<Transaction> _transactions = [
-    Transaction(
-      id: 't1',
-      title: 'Novo tênis de Corrida',
-      value: 310.76,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'Conta de Luz',
-      value: 211.30,
-      date: DateTime.now(),
-    ),
+    // Transaction(
+    //   id: 't1',
+    //   title: 'Novo tênis de Corrida',
+    //   value: 310.76,
+    //   date: DateTime.now(),
+    // ),
+    // Transaction(
+    //   id: 't2',
+    //   title: 'Conta de Luz',
+    //   value: 211.30,
+    //   date: DateTime.now(),
+    // ),
   ];
   void _addTransaction(String title, double value) {
     final newTransaction = Transaction(
